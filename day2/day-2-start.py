@@ -1,6 +1,6 @@
 #Data Types
 
-# String
+#String
 
 print("Hello"[4])
 
