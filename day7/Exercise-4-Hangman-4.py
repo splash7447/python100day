@@ -66,6 +66,7 @@ word_length = len(chosen_word)
 
 #TODO-1: - Create a variable called 'lives' to keep track of the number of lives left.
 #Set 'lives' to equal 6.
+lives = 6
 
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
@@ -75,7 +76,6 @@ display = []
 for _ in range(word_length):
     display += "_"
 
-lives = len(stages) - 1
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
     #Check guessed letter
