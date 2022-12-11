@@ -39,7 +39,7 @@ calculation_function = operations[operation_symbol]
 
 #Here the code will be:
 #second_answer = multiply(multiply(num1, num2), num3)
-second_answer = calculation_function(calculation_function(num1, num2), num3)
+#second_answer = calculation_function(calculation_function(num1, num2), num3)
 #second_answer = 2 * 3 * 3 = 18
 #To fix this bug we need to change the code on line 42 to:
 second_answer = calculation_function(first_answer, num3)
