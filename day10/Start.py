@@ -1,9 +1,6 @@
-# Functions with Outputs
+def format_name():
+  f_name = input("plz input your first name: ")
+  l_name = input("plz input your last name: ")
+  return f_name.title() + " " + l_name.title()
 
-def format_name(f_name, l_name):
-    format_f_name = f_name.title()
-    format_l_name = l_name.title()
-
-    return f"{format_f_name} {format_l_name}"
-
-print(format_name("aiden", "chen"))
+print(format_name())

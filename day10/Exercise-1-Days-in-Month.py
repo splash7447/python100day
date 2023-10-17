@@ -2,22 +2,23 @@ def is_leap(year):
     if year % 4 == 0:
         if year % 100 == 0:
             if year % 400 == 0:
-                return True
+                return "Leap year"
             else:
-                return False
+                return "Not leap year"
         else:
-            return True
+            return "Leap year"
     else:
-        return False
+        return "Not leap year"
 
 
-def days_in_month(year, month):
+# TODO: Add more code here 👇
+def days_in_month(year, mouth):
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if month > 12 or month < 1:
-        return "Invalid month"
-    if is_leap(year) and month == 2:
-        return 29
-    return month_days[month - 1]
+    if is_leap(year) == "Leap year":
+        if month == 2:
+            return month_days[1] + 1
+    else:
+        return month_days[month - 1]
 
 
 # 🚨 Do NOT change any of the code below
