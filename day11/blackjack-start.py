@@ -21,26 +21,27 @@ def calculate_score(cards):
     return sum(cards)
 
 def compare(user_score, computer_score):
-    if user_score == computer_score:
-        return "Draw"
-    elif computer_score == 0:
-        return "Lose, opponent has Blackjack"
-    elif user_score == 0:
-        return "Win with a Blackjact"
-    elif user_score > 21:
-        return "You went over. You lose"
-    elif computer_score > 21:
-        return "Opponent went over. You win"
-    elif user_score > computer_score:
-        return "You win"
-    else:
-        return "You lose"
+  if user_score == computer_score:
+    return "Draw 🙃"
+  elif user_score > 21 and computer_score > 21:
+    return "You went over. You lose 😤"
+  elif computer_score == 0:
+    return "Lose, opponent has Blackjack 😱"
+  elif user_score == 0:
+    return "Win with a Blackjact 😎"
+  elif user_score > 21:
+    return "You went over. You lose 😭"
+  elif computer_score > 21:
+    return "Opponent went over. You win 😁"
+  elif user_score > computer_score:
+    return "You win 😃"
+  else:
+    return "You lose 😤"
 
 def play_game():
 
     print(logo)
 
-    global user_score, computer_score
     user_cards = []
     computer_cards = []
     is_game_over = False
@@ -69,13 +70,12 @@ def play_game():
         computer_score = calculate_score(computer_cards)
 
     print(f"   Your final hand: {user_cards}, final score: {user_score}")
-    print(f"   Computer's final hand: {computer_score}, final score: {computer_score}")
+    print(f"   Computer's final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
 
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
     clear()
     play_game()
-
 
 #Difficulty Normal 😎: Use all Hints below to complete the project.
 #Difficulty Hard 🤔: Use only Hints 1, 2, 3 to complete the project.
