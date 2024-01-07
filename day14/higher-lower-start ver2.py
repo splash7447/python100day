@@ -31,6 +31,9 @@ def game():
     account_a = account_b
     account_b = get_random_account()
 
+  while account_a == account_b:
+    account_b = get_random_account()
+
   print(f"Compare A: {format_data(account_a)}.")
   print(vs)
   print(f"Compare B: {format_data(account_b)}.")
@@ -47,5 +50,6 @@ def game():
     print(f"You're right! Current score: {score}")
   else:
     game_should_continue = False
+    print(f"Sorry, that's wrong. Final score: {score}")
 
 game()
