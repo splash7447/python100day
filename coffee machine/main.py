@@ -28,7 +28,7 @@ def print_resource():
     print(f"Water: {resource['water']}ml")
     print(f"Milk: {resource['milk']}ml")
     print(f"Coffee: {resource['coffee']}g")
-
+    print(f"Money: ${income}")
 
 def process_coins():
     print("Please insert coins.")
