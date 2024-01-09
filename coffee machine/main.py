@@ -1,5 +1,12 @@
 from memu import MENU
 
+# 1. Prompt user asking 'What would you like? (espresso/latte/cappuccino):
+# 2. Turn off the coffee machine by entering 'off' in the prompt.
+# 3. Print report of the resources.
+# 4. Check if resources are sufficient.
+# 5. Process coins based on quarters, dimes, nickles and pennies.
+# 6. Check if the transaction was sufficient.
+# 7. Make coffee and change resources in coffee machine.
 
 income = 0
 resource = {
