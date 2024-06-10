@@ -2,11 +2,14 @@ from art import logo,vs
 from game_data import data
 import random
 
+
 def clear():
   print("\n" * 20)
 
+
 def get_random_account():
   return random.choice(data)
+
 
 def format_data(account):
   name = account['name']
@@ -14,11 +17,13 @@ def format_data(account):
   country = account['country']
   return f'{name}, a{description}, from {country}.'
 
+
 def check_answer(guess, a_followers_counts, b_followers_counts):
   if a_followers_counts > b_followers_counts:
     return guess == "a"
   else:
     return guess == "b"
+
 
 def game():
   print(logo)
@@ -51,5 +56,6 @@ def game():
   else:
     game_should_continue = False
     print(f"Sorry, that's wrong. Final score: {score}")
+
 
 game()
